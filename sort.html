@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <p id="result"></p>
+    <button onclick="normal()">numbers</button>
+    <button onclick="ascending()">ascending</button>
+    <button onclick="descending()">descending</button>
+    <script>
+     var numbers=[35,41,19,92,38,65]
+
+     function normal(){
+        document.getElementById("result").innerHTML=numbers
+     }
+
+     function ascending(){
+        numbers.sort(function(a,b){
+            return a-b
+        })
+        document.getElementById("result").innerHTML=numbers
+     }
+
+     function descending(){
+        numbers.sort(function(a,b){
+            return b-a
+        })
+        document.getElementById("result").innerHTML=numbers
+    }
+
+    </script>
+</body>
+</html>
